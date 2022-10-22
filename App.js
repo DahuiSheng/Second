@@ -2,6 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
+import UserScreen from "./screens/UserScreen";
 
 import {
   Text,
@@ -30,8 +31,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name = "Home" component={HomeScreen} />
+          <Stack.Screen
+            name = "User"
+            component={UserScreen}
+            options={({ route }) => ({
+              title: `ユーザーID${route.params.userId}の画面`,
+            })}
+            // options={{ headerShown: false }}
+          />
         </Stack.Navigator>
         {/* <Appbar />
         <Introduce/>
