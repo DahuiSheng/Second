@@ -1,11 +1,17 @@
 import React from "react";
 import { View, Text, Button } from "native-base"
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     return (
         <View>
             <Text>ホーム画面</Text>
-            <Button>
+            <Button
+                title="ユーザ"
+                onPress={() =>
+                    navigation.navigate("User", {
+                        userId: 1,
+                    }) }
+            >
                 ユーザページ 
             </Button>
         </View>
