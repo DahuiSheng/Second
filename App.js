@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Text,
   Link,
@@ -21,6 +20,7 @@ import {
 } from "native-base";
 import NativeBaseIcon from "./components/NativeBaseIcon";
 import { Platform } from "react-native";
+import Appbar from "./components/Appbar"
 
 // Define the config
 const config = {
@@ -34,15 +34,7 @@ export const theme = extendTheme({ config });
 export default function App() {
   return (
     <NativeBaseProvider>
-      <StatusBar bg="#3700B3" barStyle="light-content" />
-      <Box safeAreaTop bg="#3700B3" />
-      <HStack bg="violet.600" px="1" py="3" justifyContent="space-between" alignItems="center" w="100%">
-        <HStack alignItems="center">
-          <Text color="white" fontSize="20" fontWeight="bold">
-            Home
-          </Text>
-        </HStack>
-      </HStack>
+      <Appbar />
       
       {/* <Center
         _dark={{ bg: "blueGray.900" }}
