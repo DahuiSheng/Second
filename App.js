@@ -1,6 +1,6 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./screens/HomeScreen";
 import UserScreen from "./screens/UserScreen";
 
@@ -25,23 +25,19 @@ import Introduce from "./components/Introduce";
 // extend the theme
 // export const theme = extendTheme({ config });
 
-const Stack = createNativeStackNavigator();
+// const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
       <NativeBaseProvider>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name = "Home" component={HomeScreen} />
-          <Stack.Screen
+        <Tab.Navigator initialRouteName="Home">
+          <Tab.Screen name = "Home" component={HomeScreen} />
+          <Tab.Screen
             name = "User"
-            component={UserScreen}
-            options={({ route }) => ({
-              title: `ユーザーID${route.params.userId}の画面`,
-            })}
-            // options={{ headerShown: false }}
-          />
-        </Stack.Navigator>
+            component={UserScreen}/>
+        </Tab.Navigator>
         {/* <Appbar />
         <Introduce/>
         <Footer /> */}
