@@ -21,6 +21,7 @@ import {
 import NativeBaseIcon from "./components/NativeBaseIcon";
 import { Platform } from "react-native";
 import Appbar from "./components/Appbar"
+import Footer from "./components/Footer";
 
 // Define the config
 const config = {
@@ -35,6 +36,7 @@ export default function App() {
   return (
     <NativeBaseProvider>
       <Appbar />
+      <Footer />
       
       {/* <Center
         _dark={{ bg: "blueGray.900" }}
