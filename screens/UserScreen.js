@@ -5,7 +5,7 @@ const UserScreen = ({ route }) => {
     return (
         <View>
             <Text>
-                ユーザ画面{route.params.userId}
+                ユーザ画面
             </Text>
         </View>
     );
