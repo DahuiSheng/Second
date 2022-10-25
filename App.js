@@ -52,22 +52,32 @@ export default function App() {
             }}
           />
           <Tab.Screen
-            name = "User"
-            component={UserScreen}
+            name = "Top"
+            component={TopScreen}
             options={{
-              title: "ユーザ画面",
+              title: "Top画面",
               tabBarIcon: ({ color, size }) => (
-                <Ionicons name="person" size={size} color={color} />
+                <Ionicons name="globe" size={size} color={color} />
               )
             }}
           />
-          <Tab.Screen
+          {/* <Tab.Screen
             name = "Top"
             component={TopScreen}
             options={{
               title: "Top画面",
               tabBarIcon: ({ color, size }) => (
                 <Ionicons name="thumbs-up-outline" size={size} color={color} />
+              )
+            }}
+          /> */}
+          <Tab.Screen
+            name = "User"
+            component={UserScreen}
+            options={{
+              title: "ユーザ画面",
+              tabBarIcon: ({ color, size }) => (
+                <Ionicons name="person" size={size} color={color} />
               )
             }}
           />
